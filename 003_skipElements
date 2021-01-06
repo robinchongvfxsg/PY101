@@ -29,7 +29,7 @@ def skip_elements_003(elements):
     for i,element in enumerate(elements):
 
         if i%2 == 0:
-            new_list+=element
+            new_list.append(element)
 
     print("Method 03: " + str(new_list))
 
