@@ -1,0 +1,40 @@
+#Robin Chong updated 06-JAN
+
+def skip_elements_001(elements):
+    # Initialize variables
+    new_list = []
+    i = 0
+
+    # Iterate through the list
+    for element in range(len(elements)):
+        # Does this element belong in the resulting list?
+        if i%2 == 0 :
+            # Add this element to the resulting list
+            new_list.append(elements[i])
+        # Increment i
+        i+=1
+
+    print("Method 01: " + str(new_list))
+
+def skip_elements_002(elements):
+
+    new_list = [element for element in elements if (elements.index(element)%2 == 0)]
+
+    print("Method 02: " + str(new_list))
+
+def skip_elements_003(elements):
+    # enumerate
+    new_list = []
+
+    for i,element in enumerate(elements):
+
+        if i%2 == 0:
+            new_list+=element
+
+    print("Method 03: " + str(new_list))
+
+skip_elements_001(["a", "b", "c", "d", "e", "f", "g"]) # Should be ['a', 'c', 'e', 'g']
+skip_elements_002(["a", "b", "c", "d", "e", "f", "g"]) # Should be ['a', 'c', 'e', 'g']
+skip_elements_003(["a", "b", "c", "d", "e", "f", "g"]) # Should be ['a', 'c', 'e', 'g']
+
+
