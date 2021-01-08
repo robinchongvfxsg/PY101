@@ -1,0 +1,18 @@
+#Robin Chong updated 08-JAN
+
+def get_middle(sentence):
+    middleString = ""
+    slength = len(sentence)
+
+    if slength % 2 == 0:
+        middleString = sentence[(-slength//2-1)] + sentence[(-slength//2)]
+    else:
+        middleString = sentence[(-slength//2)]
+
+    return middleString
+
+print(get_middle("test"))#"es"
+print(get_middle("testing"))#,"t")
+print(get_middle("middle"))#,"dd")
+print(get_middle("A"))#"A")
+print(get_middle("of"))#,"of")
