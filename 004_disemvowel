@@ -1,0 +1,14 @@
+#Robin Chong updated 08-JAN
+
+def disemvowel(string):
+    vowels = ["a","e","i","o","u"]
+    string_list = ""
+
+    for alphabet in string:
+        if alphabet.lower() in vowels:
+            continue
+        else:
+            string_list+=alphabet
+    return string_list
+
+print(disemvowel("somewhere over the rainbow"))
